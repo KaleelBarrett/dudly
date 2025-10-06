@@ -1,0 +1,343 @@
+/* ===============================
+   Global Styles
+================================= */
+:root {
+  --primary-dark: #2c3e50;
+  --primary-blue: #3498db;
+  --accent-red: #e74c3c;
+  --light-background: #f8f9fa;
+  --text-color: #333;
+  --border-radius: 8px;
+  --spacing: 1rem;
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--light-background);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===============================
+   Enhanced Header & Navigation
+================================= */
+header {
+  background: var(--primary-dark);
+  padding: 0;
+  color: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, var(--primary-blue), #2980b9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.3rem;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav a:active {
+  transform: translateY(0);
+}
+
+/* REMOVED the specific development page highlighting */
+/* nav a[href="development.html"] {
+  background: var(--primary-blue);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+} */
+
+/* ===============================
+   Main Content Area
+================================= */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+/* ===============================
+   Hero / Main Sections
+================================= */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: white;
+  margin: 2rem auto;
+  border-radius: var(--border-radius);
+  max-width: var(--max-width);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1rem;
+  border: 4px solid var(--primary-blue);
+}
+
+/* ===============================
+   Enhanced Content Sections
+================================= */
+section {
+  background: white;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--primary-blue);
+}
+
+section h1 {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--light-background);
+  padding-bottom: 0.5rem;
+}
+
+section h2 {
+  color: var(--primary-dark);
+  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+section h3 {
+  color: var(--primary-blue);
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* ===============================
+   Development Page Specific Styles
+================================= */
+.chapter-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  border-left: 4px solid var(--primary-blue);
+  transition: transform 0.2s ease;
+}
+
+.chapter-card:hover {
+  transform: translateX(5px);
+}
+
+.focus-list {
+  list-style: none;
+  padding: 0;
+}
+
+.focus-list li {
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  background: #f8f9fa;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-blue);
+  transition: all 0.2s ease;
+}
+
+.focus-list li:hover {
+  transform: translateX(5px);
+  background: #e8f4fd;
+}
+
+/* ===============================
+   Footer - FIXED POSITIONING
+================================= */
+footer {
+  background: var(--primary-dark);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ===============================
+   Animations
+================================= */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Responsive Layout
+================================= */
+@media (max-width: 900px) {
+  .header-container {
+    padding: 1rem;
+  }
+  
+  nav ul {
+    gap: 0.2rem;
+  }
+  
+  nav a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+  
+  section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  
+  nav a {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 0.2rem;
+  }
+  
+  nav a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+}
